@@ -1,21 +1,21 @@
 import  random
 import os
 
-move_list = ['pedra', 'papel', ' tesoura']
+move_list = ['papel', 'pedra', 'tesoura']
 player_count = 0
 computer_count = 0
 
 print('==============================')
-print('Bem vindo ao jogo, Pedra, Papel e Tesoura')
+print('Bem vindo ao jogo, Papel, Pedra e Tesoura')
 
 def main_print ():
     print('==============================')
     print('\nPlacar')
     print('Você:{}'.format(player_count))
-    print('Você:{}'.format(computer_count))
+    print('Computer:{}'.format(computer_count))
     print('\n')
     print('Escolha seu lance')
-    print('0 - Pedra | 1 - Papel | 2 - Tesoura')
+    print('0 - Papel | 1 - Pedra | 2 - Tesoura')
 
 def select_move():
     return random.choice(move_list)
@@ -34,7 +34,7 @@ def select_winner(p_move, c_move):
     global player_count, computer_count
     if p_move == 'papel':
         if c_move == 'pedra':
-            player_count +=1
+            player_count += 1
             return 'p'
         elif c_move == 'tesoura':
             computer_count += 1
@@ -56,7 +56,7 @@ def select_winner(p_move, c_move):
         if c_move == 'papel':
             player_count +=1
             return 'p'
-        if c_move == ' pedra':
+        if c_move == 'pedra':
             computer_count +=1
             return 'c'
         else:
